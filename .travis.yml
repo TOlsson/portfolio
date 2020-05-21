@@ -6,7 +6,7 @@ cache: npm
 
 branches:
   only:
-    - client
+    - master
 
 script: 
   - cd client
@@ -19,4 +19,4 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: client/dist
   on:
-    branch: client
+    branch: master
