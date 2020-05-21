@@ -1,6 +1,6 @@
 // vue.config.js
 module.exports = {
-    publicPath: ProcessingInstruction.env.NODE_ENV === 'production'
+    publicPath: process.env.NODE_ENV === 'production'
         ? '/portfolio/'
         : '/'
   }
