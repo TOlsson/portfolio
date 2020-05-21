@@ -4,6 +4,10 @@ node_js:
 
 cache: npm
 
+branches:
+  only:
+    - client
+
 script: 
   - cd client
   - npm install
