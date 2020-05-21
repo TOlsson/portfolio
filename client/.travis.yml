@@ -6,12 +6,13 @@ cache: npm
 
 script: 
   - cd client
+  - npm install
   - npm run build
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist
+  local_dir: client/dist
   on:
     branch: client
