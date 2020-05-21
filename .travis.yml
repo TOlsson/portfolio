@@ -8,27 +8,22 @@ branches:
   only:
     - master
 
-
+page-script:
+  - cd client
+  - npm install
+  - npm run build
 
 deploy:
   # Github pages
   - provider: pages
-    - script: 
-      - cd client
-      - npm install
-      - npm run build
-      - skip_cleanup: true
-      - github_token: $GITHUB_TOKEN
-      - local_dir: client/dist
-      - on:
-        - branch: master
+    script: bash pages.sh
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: client/dist
 
   # Heroku
-  - provider: heroku
-    - api_key: $HEROKU_API
-    - app: tobias-portfolio-backend
-    - run: 
-      - "cd server"
-      - "npm start"
-    - on:
-      - branch: master
+  #- provider: heroku
+  #  skip_cleanup: true
+  #  api_key:
+  #    secure: $HEROKU_API
+  #  app: tobias-portfolio-backend
