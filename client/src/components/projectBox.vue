@@ -1,5 +1,5 @@
 <template>
-  <div class="project-box">
+  <div class="projectBox">
     <b-card bg-variant="light" style="max-height: 250px;">
       <b-card-title>{{project.name}}, {{project.code}}</b-card-title>
       <b-card-text v-line-clamp="4">{{project.desc}}</b-card-text>
@@ -17,9 +17,5 @@ export default {
 </script>
 
 <style>
-
-.project-box {
-  /* background-color: red; */
-}
 
 </style>
