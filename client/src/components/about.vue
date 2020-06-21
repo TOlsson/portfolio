@@ -1,18 +1,6 @@
 <template>
     <div>
-        <b-navbar toggleable="lg" :sticky="true" bg-variant="transparent" type="light">
-            <b-navbar-brand href="#/">Portfolio</b-navbar-brand>
-
-            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-            <b-collapse id="nav-collapse" is-nav>
-                <b-navbar-nav>
-                    <b-nav-item href="#/">Home</b-nav-item>
-                    <b-nav-item href="#/projects">Projects</b-nav-item>
-                    <b-nav-item href="#/about">About</b-nav-item>
-                </b-navbar-nav>
-            </b-collapse>
-        </b-navbar>
+        <custom-header></custom-header>
 
         <b-card class="text-center">
             <b-img center :src="require(`@/assets/img/profile1.jpg`)" fluid rounded="circle" :width="150" :heigth="250"></b-img>

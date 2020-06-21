@@ -1,5 +1,6 @@
 <template>
-    <div class="icon_fix">
+    <div id="footer">
+        <div class="icon_fix">
         <b-link :href="aboutInfo.linkedin" target="_blank">
             <b-img :src="require(`@/assets/icons/linkedin_icon.png`)" :width="32" :heigth="32" ></b-img>
         </b-link>
@@ -10,6 +11,8 @@
             <b-icon-envelope style="width: 32px; height: 32px; vertical-align: middle;"></b-icon-envelope>
         </b-link>
     </div>
+    </div>
+    
 </template>
 
 <script>
@@ -35,10 +38,24 @@ export default {
 </script>
 
 <style>
+
+    #footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+        border-top-style: solid;
+        border-top-color: black;
+        border-top-width: 1px;
+    }
+
     .icon_fix {
         position: fixed;
         bottom: 10px;
         right: 10px;
+        
     }
 
     .icon_fix img {

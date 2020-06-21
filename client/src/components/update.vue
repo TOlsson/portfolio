@@ -1,24 +1,6 @@
 <template>
     <div>
-        <!--<input v-model="aboutInfo.name" placeholder="Namn">
-        <input v-model="aboutInfo.github" placeholder="Github länk">
-        <input v-model="aboutInfo.linkedin" placeholder="LinkedIn länk">
-        <textarea v-model="aboutInfo.desc" cols="30" rows="10"></textarea>
-        <input v-model="aboutInfo.image_link" placeholder="Bild namn"> -->
-
-        <b-navbar toggleable="lg" :sticky="true" bg-variant="transparent" type="light">
-            <b-navbar-brand href="#/">Portfolio</b-navbar-brand>
-
-            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-            <b-collapse id="nav-collapse" is-nav>
-                <b-navbar-nav>
-                <b-nav-item href="#/">Home</b-nav-item>
-                <b-nav-item href="#/projects">Projects</b-nav-item>
-                <b-nav-item href="#/about">About</b-nav-item>
-                </b-navbar-nav>
-            </b-collapse>
-        </b-navbar>
+        <custom-header></custom-header>
 
         <b-form @submit="onSubmit" @reset="onReset" class="updateForm" v-if="show" :novalidate="true">
             <b-form-input
