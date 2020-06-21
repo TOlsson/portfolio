@@ -65,6 +65,8 @@
             <b-button type="submit" variant="primary">Submit</b-button>
             <b-button type="reset" variant="danger">Reset</b-button>
         </b-form>
+
+        <icon-footer></icon-footer>
     </div>
 </template>
 
@@ -124,8 +126,8 @@ export default {
 </script>
 
 <style>
-.updateForm {
-    margin: 0 auto;
-    max-width: 80vw;
-}
+    .updateForm {
+        margin: 0 auto;
+        max-width: 80vw;
+    }
 </style>

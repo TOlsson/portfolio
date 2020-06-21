@@ -12,15 +12,26 @@
                     <b-nav-item href="#/about">About</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
-
         </b-navbar>
+        
+        <icon-footer></icon-footer>
     </div>
 </template>
 
 <script>
 export default {
   name: 'home',
+  data () {
+    return {
+      aboutInfo: {}
+    }
+  },
+  mounted () {
+        
+    },
+    methods: {
 
+    }
 }
 </script>
 

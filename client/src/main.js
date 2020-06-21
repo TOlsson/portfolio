@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import projectBox from './components/projectBox'
+import iconFooter from './components/icon_footer'
 import lineClamp from 'vue-line-clamp'
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
@@ -21,6 +22,7 @@ Vue.$cookies.set('theme', 'default')
 Vue.$cookies.set('hover-time', '1s')
 
 Vue.component('project-box', projectBox)
+Vue.component('icon-footer', iconFooter)
 
 new Vue({
   render: h => h(App),

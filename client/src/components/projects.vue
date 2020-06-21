@@ -31,6 +31,8 @@
                 </b-card-group>
             </b-row>
         </b-container>
+
+        <icon-footer></icon-footer>
     </div>
 </template>
 
@@ -45,6 +47,10 @@ export default {
                 desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dictum nulla, eget mattis lacus. Cras et suscipit libero. Praesent id est at odio auctor facilisis. Nulla dignissim dui tellus, eget lacinia massa sodales a. Praesent libero dui, viverra vel orci ut, hendrerit tincidunt diam. Integer varius posuere venenatis. Sed feugiat ipsum vitae felis aliquet tincidunt. Integer quis feugiat dolor. Proin porta dictum est, ac tempor risus sollicitudin non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dictum nulla, eget mattis lacus. Cras et suscipit libero. Praesent id est at odio auctor facilisis. Nulla dignissim dui tellus, eget lacinia massa sodales a. Praesent libero dui, viverra vel orci ut, hendrerit tincidunt diam. Integer varius posuere venenatis. Sed feugiat ipsum vitae felis aliquet tincidunt. Integer quis feugiat dolor. Proin porta dictum est, ac tempor risus sollicitudin non. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet dictum nulla, eget mattis lacus. Cras et suscipit libero. Praesent id est at odio auctor facilisis. Nulla dignissim dui tellus, eget lacinia massa sodales a. Praesent libero dui, viverra vel orci ut, hendrerit tincidunt diam. Integer varius posuere venenatis. Sed feugiat ipsum vitae felis aliquet tincidunt. Integer quis feugiat dolor. Proin porta dictum est, ac tempor risus sollicitudin non.'
             }
         }
+    },
+    mounted () {
+    },
+    methods: {
     }
 }
 </script>

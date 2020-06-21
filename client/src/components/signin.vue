@@ -20,6 +20,8 @@
       <input v-model="password" type="password" placeholder="Password" v-on:keyup.enter="signIn"><br>
       <button v-on:click="signIn">Sign In</button>
     </div>
+
+    <icon-footer></icon-footer>
   </div>
 
   
@@ -34,8 +36,11 @@ export default {
   data () {
     return {
       username: '',
-      password: ''
+      password: '',
+      aboutInfo: {}
     }
+  },
+  mounted () {
   },
   methods: {
     async signIn () {
@@ -59,5 +64,4 @@ export default {
     height: 100px;
     margin: 0 auto;
   }
-
 </style>
