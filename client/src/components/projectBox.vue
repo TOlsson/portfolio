@@ -1,9 +1,10 @@
 <template>
-  <div class="projectBox">
-    <b-card bg-variant="light" style="max-height: 250px;">
-      <b-card-title>{{project.name}}, {{project.code}}</b-card-title>
-      <b-card-text v-line-clamp="4">{{project.desc}}</b-card-text>
-      <b-button href="#" variant="primary">Go somewhere</b-button>
+  <div>
+    <b-card id="projectBox" bg-variant="light">
+      <b-card-title>{{project.projectName}}</b-card-title>
+      <b-card-sub-title>{{project.courseName}}, {{project.courseCode}}</b-card-sub-title>
+      <b-card-text v-line-clamp="2">{{project.desc}}</b-card-text>
+      <b-button v-on:click="onClick($event)" variant="primary" :id="project._id">More Info...</b-button>
     </b-card>
   </div>
 </template>
@@ -12,10 +13,14 @@
 export default {
   props: [
     'project'
-  ]
+  ],
+  methods: {
+    onClick (event) {
+      this.$router.push({name: 'project', params: {id: event.currentTarget.id}})
+    }
+  }
 }
 </script>
 
 <style>
-
 </style>

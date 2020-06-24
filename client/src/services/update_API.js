@@ -12,5 +12,8 @@ export default {
     },
     postAboutInfo (auth, aboutInfo) {
         return API().post('aboutInfo', {cookieAuth: auth, aboutInfo: aboutInfo})
+    },
+    addProject (auth, projectInfo) {
+        return API().post('addProject', {cookieAuth: auth, projectInfo: projectInfo})
     }
 }

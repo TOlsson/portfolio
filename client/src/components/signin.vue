@@ -16,7 +16,6 @@
 
 <script>
 import loginAPI from '@/services/update_API.js'
-import router from '../router'
 
 export default {
   name: 'signin',
@@ -38,7 +37,7 @@ export default {
       }
       else if (response.status === 202) {
         this.$cookies.set('auth', response.data.auth)
-        router.push({name: 'update'})
+        this.$router.push({name: 'update'})
       }
     }
   }

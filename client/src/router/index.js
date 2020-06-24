@@ -5,6 +5,7 @@ import main from '@/components/main'
 import projects from '@/components/projects'
 import update from '@/components/update'
 import signin from '@/components/signin'
+import project from '@/components/project'
 
 Vue.use(Router)
 
@@ -34,6 +35,12 @@ export default new Router({
         path: '/update',
         name: 'update',
         component: update
+    },
+    {
+      path: '/project/:id',
+      name: 'project',
+      component: project,
+      props: true
     }
   ]
 })

@@ -3,6 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
+const { ObjectID } = require('mongodb')
 
 // MongoDB
 const MongoClient = require('mongodb').MongoClient
@@ -117,4 +118,40 @@ app.post('/checkAuth', (req, res) => {
     else if (req.body.cookieAuth === authSecret) {
         res.sendStatus(202)
     }
+})
+
+app.get('/projects', (req, res) => {
+    const collection = info_client.db('portfolio').collection('user')
+
+    collection.find({name: 'Tobias'}).toArray((err, user) => {
+        res.send(user[0].projects)
+    })
+})
+
+app.post('/addProject', (req, res) => {
+    if (req.body.cookieAuth !== authSecret) {
+        res.sendStatus(401)
+    }
+    
+    let projectWithId = req.body.projectInfo
+    projectWithId._id = new ObjectID()
+
+    const collection = update_client.db('portfolio').collection('user')
+
+    collection.updateOne({name: 'Tobias'}, {$addToSet: {projects: projectWithId}})
+    res.sendStatus(202)
+})
+
+app.post('/project', (req, res) => {
+    const collection = info_client.db('portfolio').collection('user')
+
+    collection.find(
+        {name: 'Tobias'}
+    ).toArray((err, data) => {
+        data[0].projects.forEach((p) => {
+            if (p._id.toString() === req.body.id) {
+                res.status(202).send(p)
+            }
+        })
+    })
 })
