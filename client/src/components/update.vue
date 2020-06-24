@@ -102,6 +102,12 @@
                         placeholder="Image link"
                         ></b-form-input>
 
+                        <b-form-input
+                        v-model="projectInfo.app_link"
+                        type="text"
+                        placeholder="App link"
+                        ></b-form-input>
+
                         <b-button type="submit" variant="primary">Submit</b-button>
                         <b-button type="reset" variant="danger">Reset</b-button>
                     </b-form>
@@ -138,7 +144,8 @@ export default {
                 desc: '',
                 repo_link: '',
                 video_link: '',
-                image_link: ''
+                image_link: '',
+                app_link: ''
             }
         }
     },
@@ -192,6 +199,7 @@ export default {
             this.projectInfo.repo_link = ''
             this.projectInfo.video_link = ''
             this.projectInfo.image_link = ''
+            this.projectInfo.app_link = ''
             this.rightShow = false
             this.$nextTick(() => {
                 this.rightShow = true

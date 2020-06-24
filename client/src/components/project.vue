@@ -6,13 +6,13 @@
 			<b-row align-h="center">
 				<h1>{{projectInfo.projectName}}</h1>
 			</b-row>
-			<b-row align-h="center">
+			<b-row v-if="projectInfo.courseName !== ''" align-h="center">
 				<h6>{{projectInfo.courseName}}, {{projectInfo.courseCode}}</h6>
 			</b-row>
 			<b-row>
 				<b-col>
 					<iframe class="contentFrame" v-if="projectInfo.video_link !== ''"  width="560" height="315" :src="`https://www.youtube.com/embed/${projectInfo.video_link}`" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					<img class="contentFrame" v-else :src="`${projectInfo.image_link}`">
+					<img class="contentFrame" v-else-if="projectInfo.image_link !== ''" :src="`${projectInfo.image_link}`">
 				</b-col>
 			</b-row>
 			<b-row v-if="projectInfo.repo_link !== ''" align-h="center">
@@ -20,6 +20,10 @@
 			</b-row>
 			<b-row align-h="center">
 				<p>{{projectInfo.desc}}</p>
+			</b-row>
+
+			<b-row align-h="center" v-if="projectInfo.app_link !== ''">
+				<b-button center :href="`${projectInfo.app_link}`" variant="primary">{{projectInfo.projectName}}</b-button>
 			</b-row>
 		</b-container>
 
